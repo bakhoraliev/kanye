@@ -1,0 +1,45 @@
+[tool.poetry]
+name = "kanye"
+version = "0.1.0"
+description = "kanye.rest API quotes"
+authors = ["Ilkhomidin Baxoraliev <itilhomidin@yandex.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/ilhomidin/kanye"
+keywords = ["kanye", "west", "rest", "quotes"]
+classifiers = [
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3"
+  ]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+requests = "^2.25.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.3"
+black = "^21.4b2"
+httpretty = "^1.0.5"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 79
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
